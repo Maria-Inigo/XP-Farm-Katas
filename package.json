@@ -1,0 +1,24 @@
+{
+  "scripts": {
+    "test": "npm run test:unit",
+    "test:unit": "jest",
+    "test:unit:watch": "npm run test:unit -- --watch",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "commitlint": "^15.0.0",
+    "eslint": "^8.4.1",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.4",
+    "jest": "^27.4.5",
+    "lint-staged": "^12.1.2",
+    "prettier": "2.5.1",
+    "typesync": "^0.8.0"
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix"
+  }
+}
