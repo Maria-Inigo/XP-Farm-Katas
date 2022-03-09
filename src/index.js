@@ -2,13 +2,9 @@ function leastLarger(a,i) {
   if (a && a.length > 0) {
     let numberAtIndex = a[i];
 
-    let nextIndex = i+1;
-    let nextNumber = a[nextIndex];
-    if (nextNumber > numberAtIndex) return nextIndex;
-
-    nextIndex = nextIndex+1;
-    nextNumber = a[nextIndex];
-    if (nextNumber > numberAtIndex) return nextIndex;
+    for(i; i<=a.length; i++) {
+      if (a[i+1] > numberAtIndex) return i+1;
+    }
   }
   return -1;
 }

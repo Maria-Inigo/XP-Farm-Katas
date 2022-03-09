@@ -13,5 +13,5 @@
 
 ### Pomodoro 2
 - ✅ When there are 3 numbers and the next index number is lower, return the next larger [2,1,3]
-- Refactor
+- ✅ Refactor
 - Review
