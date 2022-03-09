@@ -6,7 +6,12 @@
 - If there is no larger number in the set, the function returns -1 
 
 ### Pomodoro 1
-✅ Define the domain
-✅ The input must include a set of numbers and an index
-✅ When there is only one number in the array the function returns -1
-✅ When there are two numbers and there’s a larger one return that ones index
+- ✅ Define the domain
+- ✅ The input must include a set of numbers and an index
+- ✅ When there is only one number in the array the function returns -1
+- ✅ When there are two numbers and there’s a larger one return that ones index
+
+### Pomodoro 2
+- ✅ When there are 3 numbers and the next index number is lower, return the next larger [2,1,3]
+- Refactor
+- Review
