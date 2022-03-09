@@ -16,4 +16,4 @@
 - ✅ Refactor
 - Review
 
-# 2. [Lambda Calculus](https://www.codewars.com/kata/61e2f2cded0d77001693ad0b)
+# 2. [Factorial Lambda Calculus](https://www.codewars.com/kata/61e2f2cded0d77001693ad0b)
