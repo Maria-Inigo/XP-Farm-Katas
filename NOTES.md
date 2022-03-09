@@ -15,3 +15,5 @@
 - ✅ When there are 3 numbers and the next index number is lower, return the next larger [2,1,3]
 - ✅ Refactor
 - Review
+
+# 2. [Lambda Calculus](https://www.codewars.com/kata/61e2f2cded0d77001693ad0b)
