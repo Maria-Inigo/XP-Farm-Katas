@@ -9,6 +9,11 @@ function leastLarger(a,i) {
   return -1;
 }
 
+function getNumberOfPages(digitsInSummary){
+  return digitsInSummary;
+}
+
 module.exports = {
-  leastLarger
+  leastLarger,
+  getNumberOfPages
 };

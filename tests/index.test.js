@@ -1,4 +1,4 @@
-const { leastLarger } = require('../src/index');
+const { leastLarger, getNumberOfPages } = require('../src/index');
 
 describe("GIVEN the Least Larger",()=>{
   describe("WHEN we want to find the next larger number",()=>{
@@ -18,4 +18,17 @@ describe("GIVEN the Least Larger",()=>{
       expect(leastLarger([2,1,3], 0)).toBe(2);
     });
   });
+});
+
+describe('GIVEN the getNumberOfPages function', () => {
+  describe('WHEN we enter a summary with 0 digits', () => {
+    test('THEN the function result in 0', () => {
+      expect(getNumberOfPages(0)).toBe(0)
+    });
+  });
+  describe('WHEN we enter a summary with 1 digit', () => {
+    test('THEN the function result in 0', () => {
+      expect(getNumberOfPages(1)).toBe(1)
+    });
+  }); 
 });

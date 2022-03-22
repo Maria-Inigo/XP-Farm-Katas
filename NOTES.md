@@ -22,6 +22,18 @@
 - The input of the fucntion is the number of digits in the summary
 - The summary of a book is made by adding all the number of pages of the book
 - The result of the function is the number of pages in the book
+
+### User Story 1
+- AS A reader
+- I WANT TO give the number of digits in a summary
+- SO THAT I can get the number of pages in a book
+
+#### UAT 1.1
+- GIVEN the getNumberOfPages function
+- WHEN we enter the number of digits in a summary 
+- THEN the function should calculate the sum of ordered page numbers 
+
 #### Pomodoro 1
-- Write the domain
-- Write the user stories and UATs
+- ✅ Write the domain
+- ✅ Write the user stories and UATs
+- Write the test for 0 pages
