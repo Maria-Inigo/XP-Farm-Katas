@@ -19,7 +19,7 @@
 # 2. [How many pages in a book?](https://www.codewars.com/kata/622de76d28bf330057cd6af8)
 
 ### Domain:
-- The input of the fucntion is the number of digits in the summary
+- The input of the function is the number of digits in the summary
 - The summary of a book is made by adding all the number of pages of the book
 - The result of the function is the number of pages in the book
 
@@ -30,10 +30,33 @@
 
 #### UAT 1.1
 - GIVEN the getNumberOfPages function
-- WHEN we enter the number of digits in a summary 
-- THEN the function should calculate the sum of ordered page numbers 
+- WHEN we enter a summary with a number of digits lower than 9
+- THEN the function result is the same number of pages
+
+#### UAT 1.2
+- GIVEN the getNumberOfPages function
+- WHEN we enter a summary with a number of digits higher than 9
+- THEN the function result is the sum of the consecutives numbers
 
 #### Pomodoro 1
 - ✅ Write the domain
 - ✅ Write the user stories and UATs
-- Write the test for 0 pages
+- ✅ Write the test for 0 and 1 pages
+- Write the test for 11 pages
+
+#### Pomodoro 2 (wasn't able to test)
+- Refactor tests: 
+  - when the number is between 1 and 9 it sums 1 to the summary
+  - when the number is between 10 and 99 it sums 2 to the summary
+
+#### Pomodoro 3
+- Refactor tests: 
+  - ✅ when the number is between 1 and 9 it sums 1 to the summary
+  - ✅ when the number is between 10 and 99 it sums 2 to the summary
+  - when the number is between 10 and 99 it sums 2 to the summary
+
+#### Pomodoro 4
+- Refactor tests: 
+  - ✅ when the number is between 10 and 99 it sums 2 to the summary
+#### Tech debt
+- Use test each for more test cases

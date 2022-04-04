@@ -2,7 +2,7 @@
   "scripts": {
     "test": "npm run test:unit",
     "test:unit": "jest",
-    "test:unit:watch": "npm run test:unit -- --watch",
+    "test:unit:watch": "npm run test:unit -- --watch --coverage",
     "prepare": "husky install"
   },
   "devDependencies": {
