@@ -58,5 +58,9 @@
 #### Pomodoro 4
 - Refactor tests: 
   - ✅ when the number is between 10 and 99 it sums 2 to the summary
+
+#### Pomodoro 5
+- ✅ Use test each for more test cases
+  
 #### Tech debt
-- Use test each for more test cases
+- Fix tests

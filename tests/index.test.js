@@ -1,6 +1,6 @@
 const { leastLarger, getNumberOfPages } = require('../src/index');
 
-describe('GIVEN the Least Larger', () => {
+describe('GIVEN the leastLarger function', () => {
   describe('WHEN we want to find the next larger number', () => {
     it('THEN the function should return -1 if we don´t provide set of numbers and an index', () => {
       expect(leastLarger()).toBe(-1);
@@ -21,32 +21,43 @@ describe('GIVEN the Least Larger', () => {
 });
 
 describe('GIVEN the getNumberOfPages function', () => {
-  describe('WHEN we enter a summary with 0 digits', () => {
-    test('THEN the function result in 0', () => {
-      expect(getNumberOfPages(0)).toBe(0);
-    });
-  });
-  describe('WHEN we enter a summary with 1 digit', () => {
-    test('THEN the function result in 0', () => {
-      expect(getNumberOfPages(1)).toBe(1);
-    });
-  });
-});
-
-describe('GIVEN the getNumberOfPages function', () => {
   describe('WHEN we enter a summary with a number of digits lower than 9', () => {
-    test('THEN the function result is the same number of pages', () => {
-      expect(getNumberOfPages(1)).toBe(1);
-    });
+    test.each`
+      summaryLength | numberOfPages
+      ${0}          | ${0}
+      ${5}          | ${5}
+      ${9}          | ${9}
+    `(
+      'THEN if summary has length $summaryLength, the result is the same number of pages',
+      ({ summaryLength, numberOfPages }) => {
+        expect(getNumberOfPages(summaryLength)).toBe(numberOfPages);
+      },
+    );
   });
-  describe('WHEN we enter a summary with a number of digits higher than 9', () => {
-    test('THEN the result is the lengthe of the consecutive numbers that give the pages', () => {
-      expect(getNumberOfPages(25)).toBe(17);
-    });
+  describe('WHEN we enter a summary with a number of digits higher than 9 and lower than 100', () => {
+    test.each`
+      summaryLength | numberOfPages
+      ${25}         | ${17}
+      ${31}         | ${20}
+      ${99}         | ${54}
+    `(
+      'THEN if summary has length $summaryLength, the result is the length of the consecutive numbers of $numberOfPages pages',
+      ({ summaryLength, numberOfPages }) => {
+        expect(getNumberOfPages(summaryLength)).toBe(numberOfPages);
+      },
+    );
   });
-  describe('WHEN we enter a summary with a number of digits higher than 9', () => {
-    test('THEN the result is the lengthe of the consecutive numbers that give the pages', () => {
-      expect(getNumberOfPages(105)).toBe(57);
-    });
+  describe('WHEN we enter a summary with a number of digits higher than 9 and lower than 1000', () => {
+    test.each`
+      summaryLength | numberOfPages
+      ${100}        | ${55}
+      ${105}        | ${57}
+      ${999}        | ${54}
+    `(
+      'THEN if summary has length $summaryLength,the result is the length of the consecutive numbers of $numberOfPages pages',
+      ({ summaryLength, numberOfPages }) => {
+        expect(getNumberOfPages(summaryLength)).toBe(numberOfPages);
+      },
+    );
   });
 });
