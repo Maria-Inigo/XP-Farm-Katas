@@ -61,6 +61,11 @@
 
 #### Pomodoro 5
 - ✅ Use test each for more test cases
+- ✅ Fix tests
   
+#### Pomodoro 6
+- Case when the summary is more than 1000 of length
+
+#### Pomodoro 7
+- ✅ Fix tests
 #### Tech debt
-- Fix tests

@@ -11,19 +11,16 @@ function leastLarger(a, i) {
 }
 
 function getNumberOfPages(digitsInSummary) {
-  let numberOfPages;
+  if (digitsInSummary === 0) return 0;
+  let numberOfPages = 1;
 
-  if (digitsInSummary >= 0 && digitsInSummary <= 9) {
-    numberOfPages = digitsInSummary;
-  }
-  if (digitsInSummary > 9 && digitsInSummary <= 99) {
-    numberOfPages = 9 + (digitsInSummary - 9) / 2;
-  }
-  if (digitsInSummary > 99 && digitsInSummary <= 999) {
-    numberOfPages = 54 + digitsInSummary - 99 - (digitsInSummary - 99) / 2;
+  for (let i = 1; i < digitsInSummary; i += 1) {
+    numberOfPages += 1 / Math.trunc(numberOfPages).toString().length;
   }
 
-  return numberOfPages;
+  if (numberOfPages % 1 === 0.5) numberOfPages -= 0.5;
+
+  return Math.round(numberOfPages);
 }
 
 module.exports = {

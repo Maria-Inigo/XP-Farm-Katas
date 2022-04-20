@@ -34,7 +34,7 @@ describe('GIVEN the getNumberOfPages function', () => {
       },
     );
   });
-  describe('WHEN we enter a summary with a number of digits higher than 9 and lower than 100', () => {
+  describe('WHEN we enter a summary with a number of digits higher than 9 and lower than 99', () => {
     test.each`
       summaryLength | numberOfPages
       ${25}         | ${17}
@@ -47,12 +47,25 @@ describe('GIVEN the getNumberOfPages function', () => {
       },
     );
   });
-  describe('WHEN we enter a summary with a number of digits higher than 9 and lower than 1000', () => {
+  describe('WHEN we enter a summary with a number of digits higher than 99 and lower than 999', () => {
     test.each`
       summaryLength | numberOfPages
-      ${100}        | ${55}
+      ${101}        | ${55}
       ${105}        | ${57}
-      ${999}        | ${54}
+      ${151}        | ${80}
+    `(
+      'THEN if summary has length $summaryLength,the result is the length of the consecutive numbers of $numberOfPages pages',
+      ({ summaryLength, numberOfPages }) => {
+        expect(getNumberOfPages(summaryLength)).toBe(numberOfPages);
+      },
+    );
+  });
+  describe('WHEN we enter a summary with a number of digits higher than 999 and lower than 9999', () => {
+    test.each`
+      summaryLength | numberOfPages
+      ${1002}       | ${371}
+      ${1008}       | ${373}
+      ${1092}       | ${401}
     `(
       'THEN if summary has length $summaryLength,the result is the length of the consecutive numbers of $numberOfPages pages',
       ({ summaryLength, numberOfPages }) => {
